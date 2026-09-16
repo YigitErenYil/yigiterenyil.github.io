@@ -1,10 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Yiğit Eren Yıldırım</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yiğit Eren Yıldırım</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text: #0F172A;
+      --bg: #FAFAFA;
+      --accent: #2D5EFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .subhead {
+      font-size: 1.1rem;
+      color: #334155;
+      margin-bottom: 40px;
+    }
+    section {
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748B;
+      margin-bottom: 12px;
+    }
+    p { margin: 0 0 16px 0; }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .links a {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .links a:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    footer {
+      font-size: 0.9rem;
+      color: #64748B;
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; background: #FAFAFA; color: #0F172A; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
-    <h1>Yiğit Eren Yıldırım</h1>
+<body>
+  <div class="wrap">
+    <h1>I build models that point to a decision, not just a score.</h1>
+    <p class="subhead">Which customer to flag. Which employee to check in with. Which video to review first.</p>
+
+    <section>
+      <h2>Who I am</h2>
+      <p>Final-year Management Information Systems student at Izmir Bakırçay University, focused on data science and AI. Currently building this portfolio and working through FlyRank's AI Fluency internship track.</p>
+    </section>
+
+    <section>
+      <h2>What I'm building</h2>
+      <p>A set of case studies from real data science projects — HR attrition prediction, user churn modeling, content classification — each framed around the decision the model enables, not just its accuracy score. Case studies and a graduation capstone project (rooftop solar suitability) are in progress and will be added here.</p>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/yigiterenyildirim/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/YigitErenYil" target="_blank">GitHub</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="mailto:yigit09eren@gmail.com">Email</a>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2026 Yiğit Eren Yıldırım
+    </footer>
+  </div>
 </body>
 </html>
