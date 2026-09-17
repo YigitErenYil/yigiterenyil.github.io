@@ -67,6 +67,45 @@
       background: var(--accent);
       color: var(--bg);
     }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 480px;
+    }
+    label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    input, textarea {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      padding: 10px 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--text);
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    button {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 12px 20px;
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: fit-content;
+    }
+    button:hover { opacity: 0.9; }
+    .form-note {
+      font-size: 0.85rem;
+      color: #64748B;
+      margin-top: 4px;
+    }
     footer {
       font-size: 0.9rem;
       color: #64748B;
@@ -94,8 +133,25 @@
         <a href="https://www.linkedin.com/in/yigiterenyildirim/" target="_blank">LinkedIn</a>
         <a href="https://github.com/YigitErenYil" target="_blank">GitHub</a>
         <a href="cv.pdf" target="_blank">CV</a>
-        <a href="mailto:yigit09eren@gmail.com">Email</a>
       </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Have a role, a question, or just want to talk about a project? Send me a message directly.</p>
+      <form action="https://formspree.io/f/xvkgoadg" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send message</button>
+        <p class="form-note">This goes straight to my inbox — no account or sign-up needed on your end.</p>
+      </form>
     </section>
 
     <footer>
