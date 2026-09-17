@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yiğit Eren Yıldırım</title>
+  <title>Yiğit Eren Yıldırım — Data Science & AI Portfolio</title>
+  <meta name="description" content="Data science portfolio of Yiğit Eren Yıldırım — models built around decisions, not just scores. Case studies in HR attrition, churn prediction, and content classification.">
+  <meta property="og:title" content="Yiğit Eren Yıldırım — Data Science & AI Portfolio">
+  <meta property="og:description" content="I build models that point to a decision, not just a score. Case studies, CV, and contact.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yigiterenyil.github.io">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yiğit Eren Yıldırım — Data Science & AI Portfolio">
+  <meta name="twitter:description" content="I build models that point to a decision, not just a score.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -153,7 +161,7 @@
     <section>
       <h2>Contact</h2>
       <p>Have a role, a question, or just want to talk about a project? Send me a message directly.</p>
-      <form action="https://formspree.io/f/xvkgoadg" method="POST">
+      <form action="https://formspree.io/f/xvkgoadg" method="POST" id="contact-form">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -163,9 +171,28 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Send message</button>
+        <button type="submit" id="submit-btn">Send message</button>
         <p class="form-note">This goes straight to my inbox — no account or sign-up needed on your end.</p>
+        <p class="form-error" id="form-error" style="display:none; color:#B91C1C; font-size:0.85rem;">Please fill in every field with real text before sending.</p>
       </form>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+          var fields = ['name', 'email', 'message'];
+          var allFilled = fields.every(function(id) {
+            return document.getElementById(id).value.trim().length > 0;
+          });
+          var errorEl = document.getElementById('form-error');
+          if (!allFilled) {
+            e.preventDefault();
+            errorEl.style.display = 'block';
+            return;
+          }
+          errorEl.style.display = 'none';
+          var btn = document.getElementById('submit-btn');
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+        });
+      </script>
     </section>
 
     <footer>
